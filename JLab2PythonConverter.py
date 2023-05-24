@@ -4,7 +4,7 @@ import re
 import math
 
 #CELL[2]
-docs = []
+docs = ["JLab2PythonConverter.ipynb"]
 
 #CELL[3]
 CELLCOUNTER = 1
@@ -29,13 +29,24 @@ def getSOURCE() -> bool:
     return(SOURCE)
 
 #CELL[5]
+METADATA = False
+
+def setMETADATA(b: bool):
+    global METADATA
+    METADATA = b
+    
+def getMETADATA() -> bool:
+    global METADATA
+    return(METADATA)
+
+#CELL[6]
 PATTERN = re.compile("\\\\+")
 
 def getPATTERN():
     global PATTERN
     return(PATTERN)
 
-#CELL[6]
+#CELL[7]
 def line2py(line):
     if getSOURCE():
         if line == "   ]\n":
@@ -55,6 +66,8 @@ def line2py(line):
             result+= line[groups[-1][1]+1:]
             line = result
         return(line + "\n")
+    
+        
     if line == " \"cells\": [\n":
         return("#cells\n")
     if line == "   \"source\": [\n":
@@ -62,9 +75,14 @@ def line2py(line):
         cellcounter = getCELLCOUNTER()
         setCELLCOUNTER(cellcounter + 1)
         return(f"#CELL[{cellcounter}]\n")
+    if line == " \"metadata\": {\n":
+        setMETADATA(True)
+        line = "##[BELOW SECTION IS FOR Jupyter-Lab]"
+    if getMETADATA():
+        return("##" + line)
     return("")
 
-#CELL[7]
+#CELL[8]
 def ipynb2py(docs):
     for doc in docs:
         f = open(doc, "r")
@@ -74,9 +92,33 @@ def ipynb2py(docs):
         setCELLCOUNTER(1)
         for line in lines:
             f.write(line2py(line))
+    setMETADATA(False)
                 
 
-#CELL[8]
+#CELL[9]
 if __name__== "__main__":
     ipynb2py(docs)
 
+####[BELOW SECTION IS FOR Jupyter-Lab]
+## "metadata": {
+##  "kernelspec": {
+##   "display_name": "Python 3 (ipykernel)",
+##   "language": "python",
+##   "name": "python3"
+##  },
+##  "language_info": {
+##   "codemirror_mode": {
+##    "name": "ipython",
+##    "version": 3
+##   },
+##   "file_extension": ".py",
+##   "mimetype": "text/x-python",
+##   "name": "python",
+##   "nbconvert_exporter": "python",
+##   "pygments_lexer": "ipython3",
+##   "version": "3.11.2"
+##  }
+## },
+## "nbformat": 4,
+## "nbformat_minor": 5
+##}
