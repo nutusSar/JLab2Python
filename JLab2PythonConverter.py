@@ -4,7 +4,7 @@ import re
 import math
 
 #CELL[2]
-docs = ["JLab2PythonConverter.ipynb"]
+docs = []
 
 #CELL[3]
 CELLCOUNTER = 1
