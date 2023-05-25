@@ -3,12 +3,12 @@
    <p>This project provides a pair of scripts to convert between Jupyter Lab notebooks and Python scripts, and back. The converter is designed to be used with the Jupyter Lab notebook interface.</p>
 
    <h2>Files</h2>
-    <ul>
-      <li>JLab2PythonConverter.ipynb: a Jupyter Lab notebook that contains the code for converting Jupyter Lab notebooks to Python scripts.</li>
-      <li>JLab2PythonConverter.py: a Python script generated from the JLab2PythonConverter.ipynb notebook.</li>
-      <li>Python2JLabConverter.ipynb: a Jupyter Lab notebook that contains the code for converting Python scripts to Jupyter Lab notebooks.</li>
-      <li>Python2JLabConverter.py: a Python script generated from the Python2JLabConverter.ipynb notebook.</li>
-    </ul>
+   <ul>
+   <li><code>JLab2PythonConverter.ipynb</code>: a Jupyter Lab notebook that contains the code for converting Jupyter Lab notebooks to Python scripts.</li>
+   <li><code>JLab2PythonConverter.py</code>: a Python script generated from the JLab2PythonConverter.ipynb notebook.</li>
+   <li><code>Python2JLabConverter.ipynb</code>: a Jupyter Lab notebook that contains the code for converting Python scripts to Jupyter Lab notebooks.</li>
+   <li><code>Python2JLabConverter.py</code>: a Python script generated from the Python2JLabConverter.ipynb notebook.</li>
+   </ul>
     
  <h2>Installation</h2>
 
