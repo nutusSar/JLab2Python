@@ -81,7 +81,7 @@ a:hover {
 
 <pre><code>pip install jupyterlab2py</code></pre>
 
-<p>This will install the converter and all its required dependencies. Please note that you'll need to install Jupyter Lab to use this converter.</p>
+<p>This will install the converter and all its required dependencies. Please note that you can use Jupyter Lab or raw Python to use this converter.</p>
 
 <h2>Usage</h2>
 <p>The project includes two notebooks and their corresponding Python scripts:</p>
