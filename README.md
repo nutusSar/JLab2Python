@@ -1,10 +1,23 @@
-<h1>Jupyter Lab to Python Converter</h1>
-<p>This project is a Python module that works with Jupyter Lab to convert notebooks to Python scripts, and back. The converter is designed to be used with the Jupyter Lab notebook interface.</p>
+<h1>Jupyter Lab to Python Converter (and Back!)</h1>
 
-<h2>Installation</h2>
-<p>To install the converter, you can use pip:</p>
+   <p>This project provides a pair of scripts to convert between Jupyter Lab notebooks and Python scripts, and back. The converter is designed to be used with the Jupyter Lab notebook interface.</p>
 
-<pre><code>pip install jupyterlab2py</code></pre>
+   <h2>Files</h2>
+    <ul>
+      <li>JLab2PythonConverter.ipynb: a Jupyter Lab notebook that contains the code for converting Jupyter Lab notebooks to Python scripts.</li>
+      <li>JLab2PythonConverter.py: a Python script generated from the JLab2PythonConverter.ipynb notebook.</li>
+      <li>Python2JLabConverter.ipynb: a Jupyter Lab notebook that contains the code for converting Python scripts to Jupyter Lab notebooks.</li>
+      <li>Python2JLabConverter.py: a Python script generated from the Python2JLabConverter.ipynb notebook.</li>
+    </ul>
+    
+ <h2>Installation</h2>
+
+   <p>To get started with the converter, you can either download the code from GitHub, or clone the repository using Git. Here are the steps to use the converter:</p>
+
+   <ol>
+      <li>Download the repository as a ZIP file or clone it using Git:</li>
+      <pre><code>git clone https://github.com/nutusSar/JLab2Python-AND-Python2JLab.git</code></pre>
+    </ol>
 
 <p>This will install the converter and all its required dependencies. Please note that you can use Jupyter Lab or raw Python to use this converter.</p>
 
@@ -35,6 +48,8 @@ py2ipynb(docs)
 </code></pre>
 
 <p>This will create Jupyter Lab notebooks in the same directories as the original scripts, with the same names as the scripts but with the <code>.ipynb</code> extension.</p>
+
+ <p>Please note that the converter files are Python scripts, not Python modules, so they cannot be installed directly using PIP or Conda.</p>
 
 <h2>Contributing</h2>
 <p>Contributions are welcome! If you find a bug or have a feature request, please open an issue on the project's GitHub page. If you'd like to contribute code, please submit a pull request with your changes.</p>
